@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/639e87c34a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Sakura Card Captor</title>
+</head>
+<body>
+    <header>
+        <h1 id="head">Princesa Cal Card Captor Collection</h1>
+    </header>
+    <main>
+        <section style="width: 37rem;">
+            <h2 id="titulo">O Livro Clow</h2>
+            <details id="instructions">
+                <summary><strong>Instruções de uso e conteúdo</strong></summary>
+                <ul>
+                    <li>Saiba como usar...</li>
+                    <ol>
+                        <li>O app tem todas as cartas capturadas no anime</li>
+                        <li>Cada carta haverá as formas Clow e Sakura</li>
+                        <li>Toda informação sobre a Carta estará disponivel em <em style="color: red;">card info</em> bastando clicar na seta</li>
+                        <li>Na espaço de busca deve-se usar numerações de 0 a 54</li>
+                    </ol>
+                </ul>
+            </details>
+            <figure id="folderpic">
+                <img src="/folder.jpg" width="500rem;" style="border-radius: 20px;">
+            </figure>
+        </section>
+    </main>
+    <div class="container">
+        <section id="searchbar">
+            <fieldset id="cardsearch">
+                <legend><strong>Card Search</strong></legend>
+                <input type="text" id="buscar" placeholder="Card">
+                <button type="button" class="btn">Card Pick</button>
+            </fieldset>
+        </section>
+        <section id="cartoes">
+            <fieldset id="frontcard">
+                <legend id="frontcard1">Front Clow Card</legend>
+                <figure>
+                    <img class="cardinfo1" alt="">
+                </figure>
+            </fieldset>
+            <fieldset  id="backcard">
+                <legend id="backcard1">Back Clow Card</legend>
+                <figure>
+                    <img class="cardinfo2" alt="">
+                </figure>
+            </fieldset>
+            <fieldset id="description">
+                <legend style="color: rgb(255, 0, 149);">Card Info</legend>
+                <details style="color: blue;">
+                    <summary><strong>Informações sobre a carta</strong></summary>
+                    <ul class="descricao"></ul>
+                    <p style="text-align:center;"><strong>Mude para Clow ou Sakura Cards</strong></p>
+                    <button type="button" class="sakbtn">Switch Cards</button>
+                </details>
+            </fieldset>
+        </section>
+        <footer>&copy All Rights Reserved -<a class="a-footer" href="https://github.com/JessVel/sakura-card-captor-api">JessVel</a></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
