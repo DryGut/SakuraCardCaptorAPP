@@ -1,9 +1,17 @@
-const apiURL = `https://protected-taiga-89091.herokuapp.com/api/card`;
-const botao = document.querySelector('.btn');
-const busca = document.getElementById('buscar');
-const botao1 = document.querySelector('.sakbtn');
+const htmlTags = {
+  searchCardBtn: document.querySelector('.btn'),
+  searchCardInput: document.getElementById('buscar'),
+  switchCardBtn: document.querySelector('.sakbtn'),
+  cardFront: document.getElementById('frontcard'),
+  cardBack: document.getElementById('backcard'),
+  cardInfo1: document.querySelector('.cardinfo1'),
+  cardInfo2: document.querySelector('.cardinfo2'),
+  changeFrontCard: document.getElementById('frontcard1'),
+  changeBackCard: document.getElementById('backcard1')
+};
 
 const consumeApi = async()=>{
+  const apiURL = `https://protected-taiga-89091.herokuapp.com/api/card`;
   let response = await fetch(apiURL);
   if(response.status === 200){
     let data = await response.json();
@@ -13,68 +21,51 @@ const consumeApi = async()=>{
 
 const getCardInfo = async(field)=>{
   const card = await consumeApi();
-  let cardFront = document.getElementById('frontcard');
-  let cardBack = document.getElementById('backcard')
-  let cardInfo1 = document.querySelector('.cardinfo1');
-  let cardInfo2 = document.querySelector('.cardinfo2');
   let cardDescricao = document.querySelector('.descricao');
-  cardInfo1.src = card.data[field].clowCard;
-  cardInfo2.src = card.data[field].cardsReverse.clowReverse;
-  cardFront.appendChild(cardInfo1);
-  cardBack.appendChild(cardInfo2);
-  cardDescription = {
+  let cardDescription = {
     nome: card.data[field].englishName,
     simbolo: card.data[field].kanji,
     traducao: card.data[field].Rōmaji,
     descricao: card.data[field].meaning
   };
   for(let key in cardDescription){
-    let cardLista = document.createElement('li');
-    cardLista.innerHTML = cardDescription[key];
-    cardDescricao.appendChild(cardLista); 
+    let cardList = document.createElement('li');
+    cardList.innerHTML = cardDescription[key];
+    cardDescricao.appendChild(cardList); 
   }
 }
 
 const getClowCard = async(field)=>{
   const card = await consumeApi();
-  let cardFront = document.getElementById('frontcard');
-  let cardBack = document.getElementById('backcard')
-  let cardInfo1 = document.querySelector('.cardinfo1');
-  let cardInfo2 = document.querySelector('.cardinfo2');
-  cardInfo1.src = card.data[field].clowCard;
-  cardInfo2.src = card.data[field].cardsReverse.clowReverse;
-  cardFront.appendChild(cardInfo1);
-  cardBack.appendChild(cardInfo2);
+  htmlTags.cardInfo1.src = card.data[field].clowCard;
+  htmlTags.cardInfo2.src = card.data[field].cardsReverse.clowReverse;
+  htmlTags.cardFront.appendChild(htmlTags.cardInfo1);
+  htmlTags.cardBack.appendChild(htmlTags.cardInfo2);
 }
 
 const getSakuraCard = async(field)=>{
-  const data = await consumeApi();
-  let cardFront = document.getElementById('frontcard');
-  let cardBack = document.getElementById('backcard')
-  let cardInfo1 = document.querySelector('.cardinfo1');
-  let cardInfo2 = document.querySelector('.cardinfo2');
-  cardInfo1.src = data.data[field].sakuraCard;
-  cardInfo2.src = data.data[field].cardsReverse.sakuraReverse;
-  cardFront.appendChild(cardInfo1);
-  cardBack.appendChild(cardInfo2);
+  const card = await consumeApi();
+  htmlTags.cardInfo1.src = card.data[field].sakuraCard;
+  htmlTags.cardInfo2.src = card.data[field].cardsReverse.sakuraReverse;
+  htmlTags.cardFront.appendChild(htmlTags.cardInfo1);
+  htmlTags.cardBack.appendChild(htmlTags.cardInfo2);
 }
 
-botao1.addEventListener('click', (event=>{
+htmlTags.switchCardBtn.addEventListener('click', (event=>{
   event.preventDefault();
-  let front = document.getElementById('frontcard1');
-  let back = document.getElementById('backcard1');
-  if(front.innerHTML === "Front Clow Card" && back.innerHTML === "Back Clow Card"){
-    front.innerHTML = "Front Sakura Card";
-    back.innerHTML = "Back Sakura Card";
-    getSakuraCard(busca.value);
+  if(htmlTags.changeFrontCard.innerHTML === "Front Clow Card" && htmlTags.changeBackCard.innerHTML === "Back Clow Card"){
+    htmlTags.changeFrontCard.innerHTML = "Front Sakura Card";
+    htmlTags.changeBackCard.innerHTML = "Back Sakura Card";
+    getSakuraCard(htmlTags.searchCardInput.value);
   }else{
-    front.innerHTML = "Front Clow Card";
-    back.innerHTML = "Back Clow Card";
-    getClowCard(busca.value);
+    htmlTags.changeFrontCard.innerHTML = "Front Clow Card";
+    htmlTags.changeBackCard.innerHTML = "Back Clow Card";
+    getClowCard(htmlTags.searchCardInput.value);
   }
 }));
 
-botao.addEventListener('click', (event=>{
+htmlTags.searchCardBtn.addEventListener('click', (event=>{
   event.preventDefault();
-  getCardInfo(busca.value);
+  getCardInfo(htmlTags.searchCardInput.value);
+  getClowCard(htmlTags.searchCardInput.value);
 }));
