@@ -1,115 +1,115 @@
 /* ##### IMPORTS AND MEDIAS INSTRUCTIONS ##### */
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
 @media only screen and (max-width: 480px){
-    body {
-        background-color: #FFDFF7;
-        background-position: center;
-        background-position: -4rem -3rem;
-    }
+  body {
+    background-color: #FFDFF7;
+    background-position: center;
+    background-position: -4rem -3rem;
+  }
 }
 
 /* ##### HEADER ##### */
 body {
-    background-color: #FFDFF7;
+  background-color: #FFDFF7;
 }
 #head {
-    width: 38rem;
-    font-family: 'Fuzzy Bubbles', cursive;
-    font-size: 40px;
-    font-weight: 900;
-    text-align: center;
-    text-shadow: 3px 2px rgb(255, 0, 149);
-    color: blue;
+  width: 38rem;
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 3px 2px rgb(255, 0, 149);
+  color: blue;
 }
 
 
 /* ##### MAIN ##### */
 #titulo {
-    text-align: center;
-    text-shadow: 2px 1px 0px blue, 0 0 0.7em blue, 0 0 0.9em blue;
-    color: rgb(255, 0, 149);
+  text-align: center;
+  text-shadow: 2px 1px 0px blue, 0 0 0.7em blue, 0 0 0.9em blue;
+  color: rgb(255, 0, 149);
 }
 #instructions {
-    position: relative;
-    left: 1rem;
-    font-weight: 600;
-    color:rgb(12, 28, 247);
+  position: relative;
+  left: 1rem;
+  font-weight: 600;
+  color:rgb(12, 28, 247);
 }
 
 /* ##### BOTÕES ##### */
 .sakbtn {
-    border-radius: 5px;
-    background-color: blue;
-    border-color: gray;
-    color: #fff;
-    position: relative;
-    left: 8.9rem;
+  border-radius: 5px;
+  background-color: blue;
+  border-color: gray;
+  color: #fff;
+  position: relative;
+  left: 8.9rem;
 }
 .sakbtn:hover {
-    background-color: rgb(255, 0, 149);
+  background-color: rgb(255, 0, 149);
 }
 .btn {
-    border-radius: 5px;
-    background-color: blue;
-    border-color: gray;
-    color: #fff;
+  border-radius: 5px;
+  background-color: blue;
+  border-color: gray;
+  color: #fff;
 }
 .btn:hover {
-    background-color: rgb(255, 0, 149);
+  background-color: rgb(255, 0, 149);
 }
 
 /* ##### CONTAINER ##### */
 .container {
-    width: 38rem;
-    height: 17rem;
+  width: 38rem;
+  height: 17rem;
 }
 #cartoes {
-    display: grid;
-    grid-template-columns: 13rem 13rem;
-    position: relative;
-    top: 1rem;
-    left: 4rem;
+  display: grid;
+  grid-template-columns: 13rem 13rem;
+  position: relative;
+  top: 1rem;
+  left: 4rem;
 }
 #searchbar {
-    position: relative;
-    left: 8rem;
+  position: relative;
+  left: 8rem;
 }
 #cardsearch {
-    width: 16rem;
-    border-color: pink;
-    color: rgb(255, 0, 149);
-    border-radius: 10px;
+  width: 16rem;
+  border-color: pink;
+  color: rgb(255, 0, 149);
+  border-radius: 10px;
 }
 .cardinfo1, .cardinfo2{
-    max-width: 25rem;
-    max-height: 25rem;
-    position: relative;
+  max-width: 25rem;
+  max-height: 25rem;
+  position: relative;
 }
 #frontcard, #backcard {
-    border-color: pink;
-    color: rgb(255, 0, 149);
-    border-radius: 10px;
+  border-color: pink;
+  color: rgb(255, 0, 149);
+  border-radius: 10px;
 }
 #description {
-    width: 24rem;
-    border-color: pink;
-    border-radius: 10px;
+  width: 24rem;
+  border-color: pink;
+  border-radius: 10px;
 }
 
 /* ##### FOOTER ##### */
 footer {
-    background-color: rgb(255, 0, 149);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    width: 36rem;
-    position: relative;
-    top: 2rem;
-    border-radius: 5px;
+  background-color: rgb(255, 0, 149);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 36rem;
+  position: relative;
+  top: 2rem;
+  border-radius: 5px;
 }
 .a-footer {
-    color:black;
-    font-weight: bold;
-    position: relative;
-    left: 0.5rem
+  color:black;
+  font-weight: bold;
+  position: relative;
+  left: 0.5rem
 }
