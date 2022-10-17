@@ -7,7 +7,11 @@ const htmlTags = {
   cardInfo1: document.querySelector('.cardinfo1'),
   cardInfo2: document.querySelector('.cardinfo2'),
   changeFrontCard: document.getElementById('frontcard1'),
-  changeBackCard: document.getElementById('backcard1')
+  changeBackCard: document.getElementById('backcard1'),
+  cardDescricao: document.getElementById('descricao'),
+  cardNome: document.getElementById('nome'),
+  cardSimbolo: document.getElementById('simbolo'),
+  cardTraducao: document.getElementById('traducao')
 };
 
 const consumeApi = async()=>{
@@ -21,18 +25,16 @@ const consumeApi = async()=>{
 
 const getCardInfo = async(field)=>{
   const card = await consumeApi();
-  let cardDescricao = document.querySelector('.descricao');
   let cardDescription = {
     nome: card.data[field].englishName,
     simbolo: card.data[field].kanji,
     traducao: card.data[field].Rōmaji,
     descricao: card.data[field].meaning
   };
-  for(let key in cardDescription){
-    let cardList = document.createElement('li');
-    cardList.innerHTML = cardDescription[key];
-    cardDescricao.appendChild(cardList); 
-  }
+  htmlTags.cardDescricao.innerHTML = cardDescription.descricao;
+  htmlTags.cardNome.innerHTML = cardDescription.nome;
+  htmlTags.cardSimbolo.innerHTML = cardDescription.simbolo;
+  htmlTags.cardTraducao.innerHTML = cardDescription.traducao;
 }
 
 const getClowCard = async(field)=>{
@@ -69,3 +71,4 @@ htmlTags.searchCardBtn.addEventListener('click', (event=>{
   getCardInfo(htmlTags.searchCardInput.value);
   getClowCard(htmlTags.searchCardInput.value);
 }));
+

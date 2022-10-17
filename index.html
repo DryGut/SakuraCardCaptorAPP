@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/639e87c34a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Sakura Card Captor</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Sakura Card Captor</title>
 </head>
 <body>
-    <header>
-        <h1 id="head">Princesa Cal Card Captor Collection</h1>
-    </header>
-    <main>
-        <section style="width: 37rem;">
-            <h2 id="titulo">O Livro Clow</h2>
-            <details id="instructions">
-                <summary><strong>Instruções de uso e conteúdo</strong></summary>
-                <ul>
-                    <li>Saiba como usar...</li>
-                    <ol>
-                        <li>O app tem todas as cartas capturadas no anime</li>
-                        <li>Cada carta haverá as formas Clow e Sakura</li>
-                        <li>Toda informação sobre a Carta estará disponivel em <em style="color: red;">card info</em> bastando clicar na seta</li>
-                        <li>Na espaço de busca deve-se usar numerações de 0 a 54</li>
-                    </ol>
-                </ul>
-            </details>
-            <details id="msgCal">
-                <summary>&#x1F496;<strong>Mensagem para minha Princesa</strong>&#x1F496;</summary>
-                <p>Que a graça de Deus Pai Todo-Poderoso e o amor de Cristo Jesus esteja sempre convosco.
-                Minha princesa, papai te ama muito, e esta muito feliz em ver você determinada em busca
-                de sua recuperação, não esperava o contrário afinal papai sabe o quanto você é forte,
-                saiba que as provações da vida nos tornam ainda mais forte, quando pedimos algo a Deus
-                Ele não nos dá de mãos beijadas, afinal temos que nos esquivar das coisas fáceis, mas Ele
-                em Sua infinita benevolência nos dá os meios necessários para atingirmos aquilo que pedimos.
-                Então filha, papai esta muito orgulhoso de você e tem rezado bastante para sua rápida recuperação.
-                "Referi-vos essas coisas para que tenhais paz em mim. No mundo tereis afilições. Coragem!
-                Eu venci o mundo"(João, 16-33).
-                Papai te ama muito e tão logo estaremos todos juntos agradecendo e comemorando pelas graças alcançadas.
-                fique com a graça e a misericódia de Nosso Senhor Jesus Cristo e que a Santíssima Mãe de Deus sempre virgem Maria
-                a tenha nos braços e a cubra com seu poderoso manto para sua proteção e refúgio. Beijos, do seu pai que lhe ama muito.</p>
-            </details>
-            <figure id="folderpic">
-                <img src="img//folder.jpg" width="500rem;" style="border-radius: 20px;">
-            </figure>
-        </section>
-    </main>
-    <div class="container">
-        <section id="searchbar">
-            <fieldset id="cardsearch">
-                <legend><strong>Card Search</strong></legend>
-                <input type="text" id="buscar" placeholder="Card">
-                <button type="button" class="btn">Card Pick</button>
-            </fieldset>
-        </section>
-        <section id="cartoes">
-            <fieldset id="frontcard">
-                <legend id="frontcard1">Front Clow Card</legend>
-                <figure>
-                    <img class="cardinfo1" alt="">
-                </figure>
-            </fieldset>
-            <fieldset  id="backcard">
-                <legend id="backcard1">Back Clow Card</legend>
-                <figure>
-                    <img class="cardinfo2" alt="">
-                </figure>
-            </fieldset>
-            <fieldset id="description">
-                <legend style="color: rgb(255, 0, 149);">Card Info</legend>
-                <details style="color: blue;">
-                    <summary><strong>Informações sobre a carta</strong></summary>
-                    <ul class="descricao"></ul>
-                    <p style="text-align:center;"><strong>Mude para Clow ou Sakura Cards</strong></p>
-                    <button type="button" class="sakbtn">Switch Cards</button>
-                </details>
-            </fieldset>
-        </section>
-        <footer>&copy All Rights Reserved -<a class="a-footer" href="https://github.com/JessVel/sakura-card-captor-api">JessVel</a></footer>
-    </div>
-    <script src="assets/js/script.js"></script>
+  <header>
+    <h1 id="head">Princesa Cal Card Captor Collection</h1>
+  </header>
+  <main>
+    <section style="width: 37rem;">
+      <h2 id="titulo">O Livro Clow</h2>
+      <details id="instructions">
+        <summary><strong>Instruções de uso e conteúdo</strong></summary>
+        <ul>
+          <li>Saiba como usar...</li>
+          <ol>
+            <li>O app tem todas as cartas capturadas no anime</li>
+            <li>Cada carta haverá as formas Clow e Sakura</li>
+            <li>Toda informação sobre a Carta estará disponivel em <em style="color: red;">card info</em> bastando clicar na seta</li>
+            <li>Na espaço de busca deve-se usar numerações de 0 a 54</li>
+          </ol>
+        </ul>
+      </details>
+      <details id="msgCal">
+        <summary>&#x1F496;<strong>Mensagem para minha Princesa</strong>&#x1F496;</summary>
+        <p>Que a graça de Deus Pai Todo-Poderoso e o amor de Cristo Jesus esteja sempre convosco.
+          Minha princesa, papai te ama muito, e esta muito feliz em ver você determinada em busca
+          de sua recuperação, não esperava o contrário afinal papai sabe o quanto você é forte,
+          saiba que as provações da vida nos tornam ainda mais forte, quando pedimos algo a Deus
+          Ele não nos dá de mãos beijadas, afinal temos que nos esquivar das coisas fáceis, mas Ele
+          em Sua infinita benevolência nos dá os meios necessários para atingirmos aquilo que pedimos.
+          Então filha, papai esta muito orgulhoso de você e tem rezado bastante para sua rápida recuperação.
+          "Referi-vos essas coisas para que tenhais paz em mim. No mundo tereis afilições. Coragem!
+          Eu venci o mundo."(João, 16-33).
+          Papai te ama muito e tão logo estaremos todos juntos agradecendo e comemorando pelas graças alcançadas.
+          fique com a graça e a misericódia de Nosso Senhor Jesus Cristo e que a Santíssima Mãe de Deus sempre virgem Maria
+          a tenha nos braços e a cubra com seu poderoso manto para sua proteção e refúgio. Beijos, do seu pai que lhe ama muito.</p>
+      </details>
+      <figure id="folderpic">
+        <img src="img//folder.jpg" width="500rem;" style="border-radius: 20px;">
+      </figure>
+    </section>
+  </main>
+  <div class="container">
+    <section id="searchbar">
+      <fieldset id="cardsearch">
+        <legend><strong>Card Search</strong></legend>
+        <input type="text" id="buscar" placeholder="Card">
+        <button type="button" class="btn">Card Pick</button>
+      </fieldset>
+    </section>
+    <section id="cartoes">
+      <fieldset id="frontcard">
+        <legend id="frontcard1">Front Clow Card</legend>
+        <figure>
+          <img class="cardinfo1" alt="">
+        </figure>
+      </fieldset>
+      <fieldset  id="backcard">
+        <legend id="backcard1">Back Clow Card</legend>
+        <figure>
+          <img class="cardinfo2" alt="">
+        </figure>
+      </fieldset>
+      <fieldset id="description">
+        <legend style="color: rgb(255, 0, 149);">Card Info</legend>
+        <details style="color: blue;">
+          <summary><strong>Informações sobre a carta</strong></summary>
+          <ul>
+            <li id="nome"></li>
+            <li id="simbolo"></li>
+            <li id="traducao"></li>
+            <li id="descricao"></li>
+          </ul>
+          <p style="text-align:center;"><strong>Mude para Clow ou Sakura Cards</strong></p>
+          <button type="button" class="sakbtn">Switch Cards</button>
+        </details>
+      </fieldset>
+    </section>
+    <footer>&copy All Rights Reserved -<a class="a-footer" href="https://github.com/JessVel/sakura-card-captor-api">JessVel</a></footer>
+  </div>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
